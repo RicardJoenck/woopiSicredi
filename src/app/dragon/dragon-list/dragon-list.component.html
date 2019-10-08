@@ -1,0 +1,35 @@
+<main>
+  <header>
+    <button mat-stroked-button color="primary" (click)="detailsModal()">Adicionar</button>
+  </header>
+  <section>
+    <table mat-table [dataSource]="dataSource" matSortActive="name" matSortDirection="asc" matSort class="mat-elevation-z8">
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Nome </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="type">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Tipo </th>
+        <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="createdAt">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Data de Criação</th>
+        <td mat-cell *matCellDef="let element"> {{element.createdAt | date: 'dd/MM/yyyy'}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="details">
+        <th mat-header-cell *matHeaderCellDef>Ações</th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-flat-button color="primary" (click)="detailsModal(element.id)">Editar</button>
+          <button mat-flat-button color="warn" (click)="delete(element.id)">Deletar</button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </section>
+</main>

@@ -1,0 +1,22 @@
+<main>
+  <section>
+    <h2>Login</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <mat-form-field>
+            <input matInput placeholder="Username" formControlName="username">
+            <mat-error>
+              Username é <strong>obrigatório</strong>
+            </mat-error>
+          </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Password" formControlName="password">
+          <mat-error>
+            Password é <strong>obrigatório</strong>
+          </mat-error>
+        </mat-form-field>
+        <div class="form-group">
+            <button mat-flat-button color="primary">Login</button>
+        </div>
+    </form>
+  </section>
+</main>

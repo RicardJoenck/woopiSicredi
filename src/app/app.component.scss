@@ -1,0 +1,11 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+div {
+  display: flex;
+  justify-content: flex-end;
+  background: #3f51b5;
+  margin-bottom: 15px;
+  button {
+    color: #ffffff;
+  }
+}

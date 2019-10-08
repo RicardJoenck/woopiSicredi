@@ -1,0 +1,17 @@
+main {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  section {
+    width: 350px;
+    display: grid;
+    mat-form-field {
+      width: 100%;
+    }
+    .form-group {
+      display: flex;
+      justify-content: flex-end
+    }
+  }
+}

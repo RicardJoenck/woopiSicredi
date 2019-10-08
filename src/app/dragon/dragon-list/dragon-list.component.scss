@@ -1,0 +1,29 @@
+main {
+  header {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+  }
+  section {
+    display: flex;
+    justify-content: center;
+    table {
+      margin: 5px;
+      width: 99%;
+      .mat-flat-button {
+        margin: 2px;
+      }
+      td, th {
+        width: 30%;
+      }
+      td:last-child, th:last-child {
+        width: 10%;
+      }
+    }
+
+    .mat-form-field {
+      font-size: 14px;
+      width: 100%;
+    }
+  }
+}
